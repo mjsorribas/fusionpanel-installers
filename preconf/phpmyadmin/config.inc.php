@@ -3,14 +3,14 @@
 ###############################################
 # PHPMyAdmin Configuration for Sentora        #
 # Last updated: 03/07/2014                    #
-# Author: Bobby Allen (ballen@sentora.io)     #
+# Author: Bobby Allen (ballen@fusionpanel.io)     #
 ###############################################
 
 /*
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = 'SENTORA';
+$cfg['blowfish_secret'] = 'fusionpanel';
 
 /*
  * Servers configuration
@@ -28,8 +28,8 @@ $cfg['Servers'][$i]['extension'] = 'mysqli';
 /*
  * Directories for saving/loading files from server
  */
-$cfg['UploadDir'] = '/var/sentora/temp/';
-$cfg['SaveDir'] = '/var/sentora/temp/';
+$cfg['UploadDir'] = '/var/fusionpanel/temp/';
+$cfg['SaveDir'] = '/var/fusionpanel/temp/';
 
 /* rajk - for blobstreaming */
 $cfg['Servers'][$i]['bs_garbage_threshold'] = 50;
@@ -38,7 +38,7 @@ $cfg['Servers'][$i]['bs_temp_blob_timeout'] = 600;
 $cfg['Servers'][$i]['bs_temp_log_threshold'] = '32M';
 
 /*
- * Sentora specific changes
+ * fusionpanel specific changes
  */
 $cfg['ShowCreateDb'] = false;
 $cfg['ShowChgPassword'] = false;

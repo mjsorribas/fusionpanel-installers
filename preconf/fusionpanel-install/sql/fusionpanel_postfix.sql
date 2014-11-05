@@ -1,10 +1,10 @@
-CREATE DATABASE `sentora_postfix` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `fusionpanel_postfix` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `sentora_postfix`;
+USE `fusionpanel_postfix`;
 
 CREATE USER postfix@localhost IDENTIFIED BY 'postfix';
 
-GRANT ALL PRIVILEGES ON sentora_postfix . * TO postfix@localhost;
+GRANT ALL PRIVILEGES ON fusionpanel_postfix . * TO postfix@localhost;
 
 CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,

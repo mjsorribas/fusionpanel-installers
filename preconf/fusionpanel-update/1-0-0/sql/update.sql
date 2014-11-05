@@ -1,8 +1,8 @@
 /* Update Sentora Version */
-USE `sentora_core`;
+USE `fusionpanel_core`;
 
-/* Update the sentora database version number */
-UPDATE  `sentora_core`.`x_settings` SET `so_value_tx` = '1.0.0' WHERE `so_name_vc` = 'dbversion';
+/* Update the fusionpanel database version number */
+UPDATE  `fusionpanel_core`.`x_settings` SET `so_value_tx` = '1.0.0' WHERE `so_name_vc` = 'dbversion';
 
 /* Add new Protected Directories module */
 INSERT INTO `x_modules` (`mo_category_fk`,`mo_name_vc`,`mo_version_in`,`mo_folder_vc`,`mo_type_en`,`mo_desc_tx`,`mo_installed_ts`,`mo_enabled_en`,`mo_updatever_vc`,`mo_updateurl_tx`) VALUES (3,'Protected Directories',200,'protected_directories','user','Password protect your web applications and directories.',NULL,'true','','');
@@ -17,10 +17,10 @@ CREATE TABLE `x_htpasswd_file` (
   `x_htpasswd_file_message` varchar(255) NOT NULL,
   `x_htpasswd_file_created` int(11) NOT NULL,
   `x_htpasswd_file_deleted` int(11) DEFAULT NULL,
-  `x_htpasswd_sentora_user_id` int(11) NOT NULL,
+  `x_htpasswd_fusionpanel_user_id` int(11) NOT NULL,
   PRIMARY KEY (`x_htpasswd_file_id`),
   UNIQUE KEY `x_htpasswd_file_target` (`x_htpasswd_file_target`),
-  KEY `x_htpasswd_file_x_htpasswd_sentora_user_id_idx` (`x_htpasswd_sentora_user_id`)
+  KEY `x_htpasswd_file_x_htpasswd_fusionpanel_user_id_idx` (`x_htpasswd_fusionpanel_user_id`)
 ) DEFAULT CHARSET=utf8;
 
 CREATE TABLE `x_htpasswd_mapper` (
@@ -38,14 +38,14 @@ CREATE TABLE `x_htpasswd_user` (
   `x_htpasswd_user_password` varchar(255) NOT NULL,
   `x_htpasswd_user_created` int(11) NOT NULL,
   `x_htpasswd_user_deleted` int(11) DEFAULT NULL,
-  `x_htpasswd_sentora_user_id` int(11) NOT NULL,
+  `x_htpasswd_fusionpanel_user_id` int(11) NOT NULL,
   PRIMARY KEY (`x_htpasswd_user_id`),
   UNIQUE KEY `x_htpasswd_user_username` (`x_htpasswd_user_username`),
   UNIQUE KEY `x_htpasswd_user_password` (`x_htpasswd_user_password`)
 ) DEFAULT CHARSET=utf8;
 
 /** separate port setting for panel */
-insert  into `x_settings`(`so_name_vc`,`so_cleanname_vc`,`so_value_tx`,`so_defvalues_tx`,`so_desc_tx`,`so_module_vc`,`so_usereditable_en`) values ('sentora_port','Sentora Apache Port','80',NULL,'Sentora Apache panel port','Sentora Config','true');
+insert  into `x_settings`(`so_name_vc`,`so_cleanname_vc`,`so_value_tx`,`so_defvalues_tx`,`so_desc_tx`,`so_module_vc`,`so_usereditable_en`) values ('fusionpanel_port','fusionpanel Apache Port','80',NULL,'fusionpanel Apache panel port','fusionpanel Config','true');
 
 /* Fix for changed translated text */
 /* '' = ' (escaped) */

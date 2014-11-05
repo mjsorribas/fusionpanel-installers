@@ -195,10 +195,10 @@ $rcmail_config['auto_create_user'] = true;
 
 // use this folder to store log files (must be writeable for apache user)
 // This is used by the 'file' log driver.
-$rcmail_config['log_dir'] = '/var/sentora/logs/roundcube/';
+$rcmail_config['log_dir'] = '/var/fusionpanel/logs/roundcube/';
 
 // use this folder to store temp files (must be writeable for apache user)
-$rcmail_config['temp_dir'] = '/var/sentora/temp';
+$rcmail_config['temp_dir'] = '/var/fusionpanel/temp';
 
 // lifetime of message cache
 // possible units: s, m, h, d, w
@@ -306,7 +306,7 @@ $rcmail_config['max_group_members'] = 0;
 $rcmail_config['useragent'] = 'Roundcube Webmail/'.RCMAIL_VERSION;
 
 // use this name to compose page titles
-$rcmail_config['product_name'] = 'Sentora Webmail';
+$rcmail_config['product_name'] = 'Fusion Panel Webmail';
 
 // try to load host-specific configuration
 // see http://trac.roundcube.net/wiki/Howto_Config for more details

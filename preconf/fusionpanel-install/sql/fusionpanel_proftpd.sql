@@ -17,12 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `sentora_proftpd`
+-- Database: `fusionpanel_proftpd`
 --
-CREATE DATABASE `sentora_proftpd`;
-USE `sentora_proftpd`;
+CREATE DATABASE `fusionpanel_proftpd`;
+USE `fusionpanel_proftpd`;
 CREATE USER proftpd@localhost IDENTIFIED BY 'proftpd';
-GRANT ALL PRIVILEGES ON sentora_proftpd . * TO proftpd@localhost;
+GRANT ALL PRIVILEGES ON fusionpanel_proftpd . * TO proftpd@localhost;
 -- --------------------------------------------------------
 
 --
